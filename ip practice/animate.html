@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Animate Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #element{
+            height:100px;
+            width:100px;
+            text-align: center;
+            background-color: blue;
+            line-height:100px;
+            margin:10px;
+
+        }
+    </style>
+    </head>
+    <body>
+        <div id="element">hello</div>
+        <button id="hidebtn" >hide</button>
+        <button id="showbtn" >show</button>
+        <button id="togglebtn" >toggle</button>
+        <script>
+            $("#hidebtn").click(function(){
+                $("#element").animate({
+                    opacity:0,
+                    height:"toggle"
+                },500);
+            });
+
+            $("#showbtn").click(function(){
+                $("#element").animate({
+                    opacity:1,
+                    height:"toggle"
+                });
+            });
+            $("#togglebtn").click(function(){
+                $("#element").animate({
+                    opacity:"toggle",
+                    height:"toggle"
+                });
+            });
+        </script>
+
+    </body>
+</html>
